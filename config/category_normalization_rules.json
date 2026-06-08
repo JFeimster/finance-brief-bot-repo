@@ -1,0 +1,121 @@
+{
+  "canonical_categories": {
+    "Revenue / Inflows": [
+      "deposit",
+      "stripe",
+      "square",
+      "paypal",
+      "shopify",
+      "customer payment",
+      "sales",
+      "invoice payment",
+      "ach credit"
+    ],
+    "Payroll": [
+      "payroll",
+      "gusto",
+      "adp",
+      "paychex",
+      "wages",
+      "salary"
+    ],
+    "Contractors": [
+      "contractor",
+      "freelancer",
+      "upwork",
+      "1099",
+      "consultant"
+    ],
+    "Rent / Facilities": [
+      "rent",
+      "lease",
+      "property management",
+      "office",
+      "coworking",
+      "wework"
+    ],
+    "Software / Subscriptions": [
+      "software",
+      "subscription",
+      "saas",
+      "google workspace",
+      "microsoft",
+      "aws",
+      "quickbooks",
+      "xero",
+      "notion",
+      "slack",
+      "zoom"
+    ],
+    "Marketing / Advertising": [
+      "facebook ads",
+      "meta ads",
+      "google ads",
+      "linkedin ads",
+      "marketing",
+      "advertising",
+      "agency"
+    ],
+    "Debt Service": [
+      "loan payment",
+      "merchant cash advance",
+      "financing",
+      "line of credit",
+      "interest",
+      "principal",
+      "debt"
+    ],
+    "Taxes": [
+      "irs",
+      "tax",
+      "state tax",
+      "department of revenue",
+      "sales tax",
+      "withholding"
+    ],
+    "Inventory / COGS": [
+      "inventory",
+      "supplier",
+      "wholesale",
+      "materials",
+      "cost of goods",
+      "cogs"
+    ],
+    "Professional Services": [
+      "legal",
+      "law",
+      "accounting",
+      "bookkeeping",
+      "cpa",
+      "consulting"
+    ],
+    "Insurance": [
+      "insurance",
+      "premium",
+      "liability",
+      "workers comp"
+    ],
+    "Travel / Meals": [
+      "hotel",
+      "airline",
+      "uber",
+      "lyft",
+      "restaurant",
+      "meals",
+      "travel"
+    ],
+    "Owner Draws / Distributions": [
+      "owner draw",
+      "distribution",
+      "member draw",
+      "shareholder distribution"
+    ],
+    "Transfers": [
+      "transfer",
+      "internal transfer",
+      "bank transfer",
+      "xfer"
+    ],
+    "Other / Uncategorized": []
+  }
+}

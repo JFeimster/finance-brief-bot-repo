@@ -1,0 +1,14 @@
+{
+  "watch_items": [
+    {
+      "risk_level": "Watch List",
+      "title": "Payroll concentration",
+      "suggested_next_action": "Confirm next payroll timing against expected deposits."
+    },
+    {
+      "risk_level": "Watch List",
+      "title": "Debt service",
+      "suggested_next_action": "Keep the next payment date visible in the obligation tracker."
+    }
+  ]
+}

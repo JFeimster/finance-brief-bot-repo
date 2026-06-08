@@ -1,0 +1,28 @@
+# Ignore local/editor files
+
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.tmp
+*.log
+
+# OS and sync artifacts
+desktop.ini
+~$*
+*.bak
+
+# Environment and secrets
+.env
+.env.*
+*.key
+*.pem
+
+# Python/cache artifacts
+__pycache__/
+*.pyc
+
+# Node artifacts, if site tooling is added later
+node_modules/
+dist/
+build/

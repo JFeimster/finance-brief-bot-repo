@@ -1,0 +1,77 @@
+{
+  "knowledge_manifest_version": "1.0.0",
+  "project": "Weekly Finance Brief Bot",
+  "description": "Tracks files uploaded or intended for upload to GPT Knowledge.",
+  "files": [
+    {
+      "path": "docs/brief_output_spec.md",
+      "recommended_for_upload": true,
+      "purpose": "Defines the required Weekly Finance Brief output structure."
+    },
+    {
+      "path": "docs/csv_column_mapping_guide.md",
+      "recommended_for_upload": true,
+      "purpose": "Guides flexible CSV column interpretation."
+    },
+    {
+      "path": "docs/cashflow_calculation_rules.md",
+      "recommended_for_upload": true,
+      "purpose": "Defines inflow, outflow, net movement, and balance calculation rules."
+    },
+    {
+      "path": "docs/risk_level_framework.md",
+      "recommended_for_upload": true,
+      "purpose": "Defines Low Risk, Watch List, High Attention, and Critical risk levels."
+    },
+    {
+      "path": "config/category_normalization_rules.json",
+      "recommended_for_upload": true,
+      "purpose": "Provides canonical category mappings."
+    },
+    {
+      "path": "config/watch_item_detection_rules.json",
+      "recommended_for_upload": true,
+      "purpose": "Provides machine-readable watch item detection rules."
+    },
+    {
+      "path": "docs/funding_readiness_note_guide.md",
+      "recommended_for_upload": true,
+      "purpose": "Guides safe funding readiness language."
+    },
+    {
+      "path": "docs/data_quality_check_guide.md",
+      "recommended_for_upload": true,
+      "purpose": "Guides data quality issue detection and reporting."
+    },
+    {
+      "path": "docs/multi_file_analysis_workflow.md",
+      "recommended_for_upload": true,
+      "purpose": "Explains multi-file analysis and consolidation."
+    },
+    {
+      "path": "docs/period_comparison_workflow.md",
+      "recommended_for_upload": true,
+      "purpose": "Explains period-over-period trend analysis."
+    },
+    {
+      "path": "docs/advisor_client_ready_language.md",
+      "recommended_for_upload": true,
+      "purpose": "Guides advisor-friendly, client-ready language."
+    },
+    {
+      "path": "docs/plain_english_finance_glossary.md",
+      "recommended_for_upload": true,
+      "purpose": "Provides simple definitions for common finance terms."
+    },
+    {
+      "path": "docs/privacy_and_sensitive_data_rules.md",
+      "recommended_for_upload": true,
+      "purpose": "Defines privacy and sensitive data handling rules."
+    },
+    {
+      "path": "docs/unsupported_advice_boundaries.md",
+      "recommended_for_upload": true,
+      "purpose": "Defines tax, legal, accounting, investment, lending, and underwriting boundaries."
+    }
+  ]
+}

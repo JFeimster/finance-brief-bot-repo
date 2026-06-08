@@ -1,0 +1,37 @@
+{
+  "prompt_manifest_version": "1.0.0",
+  "prompts": [
+    {
+      "path": "prompts/chatgpt/weekly_finance_brief_prompt.md",
+      "purpose": "Default weekly brief generation."
+    },
+    {
+      "path": "prompts/chatgpt/csv_analysis_prompt.md",
+      "purpose": "CSV structure and transaction analysis."
+    },
+    {
+      "path": "prompts/chatgpt/multi_file_analysis_prompt.md",
+      "purpose": "Multiple file or account analysis."
+    },
+    {
+      "path": "prompts/chatgpt/messy_csv_cleanup_prompt.md",
+      "purpose": "Messy CSV review and cleanup guidance."
+    },
+    {
+      "path": "prompts/testing/regression_test_prompt.md",
+      "purpose": "Regression-style output review."
+    },
+    {
+      "path": "prompts/testing/compare_expected_output_prompt.md",
+      "purpose": "Compare generated and expected outputs."
+    },
+    {
+      "path": "prompts/advisors/client_ready_brief_prompt.md",
+      "purpose": "Advisor-to-client rewrite."
+    },
+    {
+      "path": "prompts/advisors/board_update_prompt.md",
+      "purpose": "Board or investor summary."
+    }
+  ]
+}

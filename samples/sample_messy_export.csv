@@ -1,0 +1,9 @@
+Transaction Date,Details,Type,Debit,Credit,Running Balance,Account Name,Status
+2026-05-04,STRIPE PAYOUT 8942,Deposit,,8200,33200,Checking,Posted
+2026-05-05,GUSTO PAYROLL MAY,Payment,6100,,27100,Checking,Posted
+2026-05-05,GUSTO PAYROLL MAY,Payment,6100,,27100,Checking,Posted
+2026-05-06,GOOGLE *WORKSPACE,Card Purchase,144,,26956,Checking,Posted
+2026-05-07,CLIENT ACH ACME CO,Deposit,,5400,32356,Checking,Pending
+2026-05-08,OFFICE RENT,Payment,3200,,29156,Checking,Posted
+2026-05-08,LOAN PMT 4829,Payment,1850,,27306,Checking,Posted
+2026-05-09,UNKNOWN CARD CHARGE,Card Purchase,925,,26381,Checking,Posted

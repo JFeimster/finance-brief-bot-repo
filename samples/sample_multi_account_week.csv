@@ -1,0 +1,11 @@
+Date,Description,Category,Amount,Balance,Account,Status
+2026-05-04,Opening Balance,Balance,0,25000,Operating Checking,Posted
+2026-05-04,Stripe Payout,Revenue / Inflows,8200,33200,Operating Checking,Posted
+2026-05-05,Gusto Payroll,Payroll,-6100,27100,Operating Checking,Posted
+2026-05-06,Transfer to Savings,Transfers,-5000,22100,Operating Checking,Posted
+2026-05-06,Transfer from Checking,Transfers,5000,15000,Reserve Savings,Posted
+2026-05-07,Client ACH Payment,Revenue / Inflows,5400,27500,Operating Checking,Posted
+2026-05-08,Office Rent,Rent / Facilities,-3200,24300,Operating Checking,Posted
+2026-05-09,Interest Credit,Revenue / Inflows,35,15035,Reserve Savings,Posted
+2026-05-10,Ending Balance,Balance,0,24300,Operating Checking,Posted
+2026-05-10,Ending Balance,Balance,0,15035,Reserve Savings,Posted

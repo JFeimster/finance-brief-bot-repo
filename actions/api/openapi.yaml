@@ -1,0 +1,68 @@
+openapi: 3.1.0
+info:
+  title: Weekly Finance Brief Bot API
+  version: 0.1.0
+  description: Placeholder OpenAPI schema for future GPT Actions.
+servers:
+  - url: https://example.com/api
+    description: Placeholder server
+paths:
+  /health:
+    get:
+      operationId: getHealthStatus
+      summary: Check API health status
+      responses:
+        "200":
+          description: Health status response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: ok
+  /brief/generate:
+    post:
+      operationId: generateWeeklyFinanceBrief
+      summary: Generate a Weekly Finance Brief from normalized transaction data
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - transactions
+              properties:
+                business_name:
+                  type: string
+                review_period:
+                  type: string
+                transactions:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      date:
+                        type: string
+                      description:
+                        type: string
+                      category:
+                        type: string
+                      amount:
+                        type: number
+                      balance:
+                        type: number
+                      account:
+                        type: string
+      responses:
+        "200":
+          description: Generated brief response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  brief_markdown:
+                    type: string

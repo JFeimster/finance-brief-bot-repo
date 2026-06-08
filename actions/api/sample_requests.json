@@ -1,0 +1,16 @@
+{
+  "generate_brief_request": {
+    "business_name": "Sample Business",
+    "review_period": "2026-05-04 to 2026-05-10",
+    "transactions": [
+      {
+        "date": "2026-05-04",
+        "description": "Stripe Payout",
+        "category": "Revenue / Inflows",
+        "amount": 8200,
+        "balance": 33200,
+        "account": "Operating Checking"
+      }
+    ]
+  }
+}

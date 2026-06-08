@@ -1,0 +1,17 @@
+{
+  "repo_name": "finance-brief-bot-repo",
+  "project_name": "Weekly Finance Brief Bot",
+  "purpose": "Repository for custom GPT knowledge, documentation, prompts, samples, tests, site files, skills, and future actions.",
+  "primary_folders": {
+    "docs": "Core documentation and behavior references.",
+    "config": "Machine-readable JSON configuration files.",
+    "samples": "Synthetic CSV files for testing.",
+    "tests": "Expected outputs and regression references.",
+    "knowledge": "Files uploaded or intended for upload to GPT Knowledge.",
+    "actions": "Future GPT Actions and API files.",
+    "skills": "Assistant-facing operating procedures.",
+    "site": "Static website, embeds, widgets, and tools.",
+    "prompts": "Reusable prompts and prompt templates."
+  },
+  "safety_note": "Do not commit real client bank data, full account numbers, card numbers, tax IDs, or confidential financial records."
+}

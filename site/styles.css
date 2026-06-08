@@ -1,0 +1,45 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: #172033;
+  background: #f7f8fb;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.site-header {
+  padding: 48px 24px;
+  background: #172033;
+  color: #ffffff;
+}
+
+.site-header h1 {
+  margin: 0 0 8px;
+}
+
+main {
+  max-width: 920px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #dde2ea;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+a {
+  color: #174ea6;
+}
+
+footer {
+  max-width: 920px;
+  margin: 32px auto;
+  padding: 0 16px 32px;
+  color: #596275;
+}

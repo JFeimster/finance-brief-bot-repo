@@ -1,0 +1,53 @@
+{
+  "watch_item_rules": [
+    {
+      "id": "negative_net_cash_flow",
+      "label": "Negative net cash movement",
+      "default_risk_level": "Watch List",
+      "condition": "total_outflows_greater_than_total_inflows",
+      "why_it_matters": "Cash left the business faster than it came in during the review period."
+    },
+    {
+      "id": "large_single_outflow",
+      "label": "Large single outgoing transaction",
+      "default_risk_level": "Watch List",
+      "condition": "single_outflow_is_material_relative_to_weekly_outflows",
+      "why_it_matters": "A large payment can create short-term pressure if upcoming inflows are delayed."
+    },
+    {
+      "id": "payroll_or_debt_pressure",
+      "label": "Payroll or debt-service pressure",
+      "default_risk_level": "High Attention",
+      "condition": "payroll_or_debt_service_is_large_relative_to_inflows",
+      "why_it_matters": "Required obligations may reduce flexibility for other expenses."
+    },
+    {
+      "id": "duplicate_looking_transaction",
+      "label": "Duplicate-looking transaction",
+      "default_risk_level": "Watch List",
+      "condition": "same_or_similar_date_amount_description_vendor",
+      "why_it_matters": "Possible duplicate records can distort cash-flow analysis."
+    },
+    {
+      "id": "missing_balance_data",
+      "label": "Missing balance data",
+      "default_risk_level": "Low Risk",
+      "condition": "balance_column_missing_or_unreliable",
+      "why_it_matters": "Cash position cannot be confirmed from activity alone."
+    },
+    {
+      "id": "revenue_concentration",
+      "label": "Revenue concentration",
+      "default_risk_level": "Watch List",
+      "condition": "one_customer_or_source_represents_large_share_of_inflows",
+      "why_it_matters": "Dependence on one payer can create volatility if payment timing changes."
+    },
+    {
+      "id": "unclear_transfer_activity",
+      "label": "Unclear transfer activity",
+      "default_risk_level": "Low Risk",
+      "condition": "transfer_like_transactions_not_clearly_labeled",
+      "why_it_matters": "Transfers can be mistaken for income or expenses if not labeled clearly."
+    }
+  ]
+}
