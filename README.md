@@ -46,9 +46,6 @@ This repository contains the working files for the GPT, including documentation,
 - `prompts/` — Reusable prompts, prompt templates, and testing prompts.
   - Includes ChatGPT prompts, testing prompts, advisor prompts, coding-agent prompts, and prompt manifests.
 
-
----
-
 - `tooling/` — Tool-specific guidance for AI coding assistants and development workflows.
   - `tooling/codex/` — Codex and ChatGPT coding workflow instructions and tasks.
   - `tooling/jules/` — Jules-style GitHub task instructions and task ideas.
@@ -56,6 +53,8 @@ This repository contains the working files for the GPT, including documentation,
   - `tooling/github/` — GitHub issue and pull request template references.
   - `tooling/cursor/` — Cursor-oriented repo editing rules.
   - `tooling/replit/` — Replit Agent and app-builder notes.
+
+ ---
 
 ## Primary GPT Output
 
