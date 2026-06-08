@@ -1,0 +1,48 @@
+{
+  "project": "Weekly Finance Brief Bot",
+  "repo": "finance-brief-bot-repo",
+  "agent_files_version": "1.0.0",
+  "primary_agent_instruction_file": "AGENTS.md",
+  "context_file": "AI_CONTEXT.md",
+  "task_file": "TASKS.md",
+  "tooling_folder": "tooling",
+  "tools": {
+    "codex": {
+      "folder": "tooling/codex",
+      "primary_instruction_file": "tooling/codex/codex_instructions.md",
+      "task_file": "tooling/codex/codex_tasks.md"
+    },
+    "jules": {
+      "folder": "tooling/jules",
+      "primary_instruction_file": "tooling/jules/jules_instructions.md",
+      "task_file": "tooling/jules/jules_tasks.md"
+    },
+    "vercel": {
+      "folder": "tooling/vercel",
+      "primary_instruction_file": "tooling/vercel/vercel_project_notes.md",
+      "deploy_checklist": "tooling/vercel/vercel_deploy_checklist.md",
+      "v0_prompts": "tooling/vercel/v0_prompt_templates.md"
+    },
+    "github": {
+      "folder": "tooling/github",
+      "issue_templates": [
+        "tooling/github/feature_request.md",
+        "tooling/github/bug_report.md"
+      ],
+      "pull_request_template": "tooling/github/pull_request_template.md"
+    },
+    "cursor": {
+      "folder": "tooling/cursor",
+      "rules": "tooling/cursor/cursor_rules.md"
+    },
+    "replit": {
+      "folder": "tooling/replit",
+      "notes": "tooling/replit/replit_agent_notes.md"
+    }
+  },
+  "safety": {
+    "no_real_financial_data": true,
+    "no_tax_legal_accounting_lending_advice": true,
+    "mask_sensitive_identifiers": true
+  }
+}

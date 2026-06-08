@@ -1,5 +1,5 @@
 {
-  "prompt_manifest_version": "1.0.0",
+  "prompt_manifest_version": "1.1.0",
   "prompts": [
     {
       "path": "prompts/chatgpt/weekly_finance_brief_prompt.md",
@@ -32,6 +32,30 @@
     {
       "path": "prompts/advisors/board_update_prompt.md",
       "purpose": "Board or investor summary."
+    },
+    {
+      "path": "prompts/coding_agents/repo_update_prompt.md",
+      "purpose": "General repo update prompt for coding agents."
+    },
+    {
+      "path": "prompts/coding_agents/static_site_update_prompt.md",
+      "purpose": "Static site editing prompt."
+    },
+    {
+      "path": "prompts/coding_agents/github_issue_to_pr_prompt.md",
+      "purpose": "GitHub issue-to-PR workflow prompt."
+    },
+    {
+      "path": "prompts/coding_agents/vercel_v0_site_prompt.md",
+      "purpose": "Vercel v0 static site generation prompt."
+    },
+    {
+      "path": "prompts/coding_agents/jules_task_prompt.md",
+      "purpose": "Jules task assignment prompt."
+    },
+    {
+      "path": "prompts/coding_agents/codex_repo_edit_prompt.md",
+      "purpose": "Codex repository editing prompt."
     }
   ]
 }
