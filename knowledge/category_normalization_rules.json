@@ -1,0 +1,72 @@
+{
+  "project": "Weekly Finance Brief Bot",
+  "purpose": "Provides practical category buckets and keyword mappings for normalizing transaction activity.",
+  "category_buckets": [
+    {
+      "category": "Revenue / Inflows",
+      "keywords": ["deposit", "payment", "revenue", "sales", "stripe", "square", "paypal", "shopify", "invoice", "ach credit"]
+    },
+    {
+      "category": "Payroll",
+      "keywords": ["payroll", "gusto", "adp", "paychex", "wages", "salary", "employee"]
+    },
+    {
+      "category": "Contractors",
+      "keywords": ["contractor", "freelancer", "upwork", "fiverr", "1099", "consultant"]
+    },
+    {
+      "category": "Rent / Facilities",
+      "keywords": ["rent", "lease", "office", "coworking", "utilities", "electric", "water", "internet"]
+    },
+    {
+      "category": "Software / Subscriptions",
+      "keywords": ["software", "subscription", "saas", "openai", "google", "microsoft", "notion", "zapier", "quickbooks", "xero", "slack"]
+    },
+    {
+      "category": "Marketing / Advertising",
+      "keywords": ["facebook ads", "google ads", "meta", "advertising", "marketing", "seo", "lead", "campaign"]
+    },
+    {
+      "category": "Debt Service",
+      "keywords": ["loan", "advance", "financing", "repayment", "ach debit", "merchant cash advance", "mca", "line of credit"]
+    },
+    {
+      "category": "Taxes",
+      "keywords": ["irs", "tax", "state tax", "department of revenue", "treasury"]
+    },
+    {
+      "category": "Inventory / COGS",
+      "keywords": ["inventory", "supplies", "materials", "wholesale", "cogs", "cost of goods"]
+    },
+    {
+      "category": "Professional Services",
+      "keywords": ["legal", "accounting", "bookkeeping", "consulting", "advisor", "attorney", "cpa"]
+    },
+    {
+      "category": "Insurance",
+      "keywords": ["insurance", "premium", "policy"]
+    },
+    {
+      "category": "Travel / Meals",
+      "keywords": ["hotel", "airline", "uber", "lyft", "restaurant", "meals", "travel", "parking", "fuel"]
+    },
+    {
+      "category": "Owner Draws / Distributions",
+      "keywords": ["owner draw", "distribution", "member draw", "shareholder", "draw"]
+    },
+    {
+      "category": "Transfers",
+      "keywords": ["transfer", "internal transfer", "bank transfer", "zelle transfer", "wire transfer"]
+    },
+    {
+      "category": "Other / Uncategorized",
+      "keywords": []
+    }
+  ],
+  "rules": [
+    "When uncertain, preserve uncertainty.",
+    "Do not force unclear transactions into a category.",
+    "Flag possible transfers before treating them as revenue or expense.",
+    "Do not silently delete or ignore duplicate-looking transactions."
+  ]
+}
