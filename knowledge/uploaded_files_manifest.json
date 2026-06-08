@@ -1,77 +1,110 @@
-{
-  "knowledge_manifest_version": "1.0.0",
+﻿{
+  "knowledge_manifest_version": "1.1.0",
   "project": "Weekly Finance Brief Bot",
   "description": "Tracks files uploaded or intended for upload to GPT Knowledge.",
+  "knowledge_directory": "knowledge",
   "files": [
     {
-      "path": "docs/brief_output_spec.md",
+      "path": "knowledge/brief_output_spec.md",
       "recommended_for_upload": true,
       "purpose": "Defines the required Weekly Finance Brief output structure."
     },
     {
-      "path": "docs/csv_column_mapping_guide.md",
+      "path": "knowledge/csv_column_mapping_guide.md",
       "recommended_for_upload": true,
       "purpose": "Guides flexible CSV column interpretation."
     },
     {
-      "path": "docs/cashflow_calculation_rules.md",
+      "path": "knowledge/cashflow_calculation_rules.md",
       "recommended_for_upload": true,
       "purpose": "Defines inflow, outflow, net movement, and balance calculation rules."
     },
     {
-      "path": "docs/risk_level_framework.md",
+      "path": "knowledge/risk_level_framework.md",
       "recommended_for_upload": true,
       "purpose": "Defines Low Risk, Watch List, High Attention, and Critical risk levels."
     },
     {
-      "path": "config/category_normalization_rules.json",
-      "recommended_for_upload": true,
-      "purpose": "Provides canonical category mappings."
-    },
-    {
-      "path": "config/watch_item_detection_rules.json",
-      "recommended_for_upload": true,
-      "purpose": "Provides machine-readable watch item detection rules."
-    },
-    {
-      "path": "docs/funding_readiness_note_guide.md",
+      "path": "knowledge/funding_readiness_note_guide.md",
       "recommended_for_upload": true,
       "purpose": "Guides safe funding readiness language."
     },
     {
-      "path": "docs/data_quality_check_guide.md",
+      "path": "knowledge/data_quality_check_guide.md",
       "recommended_for_upload": true,
       "purpose": "Guides data quality issue detection and reporting."
     },
     {
-      "path": "docs/multi_file_analysis_workflow.md",
+      "path": "knowledge/multi_file_analysis_workflow.md",
       "recommended_for_upload": true,
       "purpose": "Explains multi-file analysis and consolidation."
     },
     {
-      "path": "docs/period_comparison_workflow.md",
+      "path": "knowledge/period_comparison_workflow.md",
       "recommended_for_upload": true,
       "purpose": "Explains period-over-period trend analysis."
     },
     {
-      "path": "docs/advisor_client_ready_language.md",
+      "path": "knowledge/advisor_client_ready_language.md",
       "recommended_for_upload": true,
       "purpose": "Guides advisor-friendly, client-ready language."
     },
     {
-      "path": "docs/plain_english_finance_glossary.md",
+      "path": "knowledge/plain_english_finance_glossary.md",
       "recommended_for_upload": true,
       "purpose": "Provides simple definitions for common finance terms."
     },
     {
-      "path": "docs/privacy_and_sensitive_data_rules.md",
+      "path": "knowledge/privacy_and_sensitive_data_rules.md",
       "recommended_for_upload": true,
       "purpose": "Defines privacy and sensitive data handling rules."
     },
     {
-      "path": "docs/unsupported_advice_boundaries.md",
+      "path": "knowledge/unsupported_advice_boundaries.md",
       "recommended_for_upload": true,
       "purpose": "Defines tax, legal, accounting, investment, lending, and underwriting boundaries."
+    },
+    {
+      "path": "knowledge/category_normalization_rules.json",
+      "recommended_for_upload": true,
+      "purpose": "Provides canonical category mappings."
+    },
+    {
+      "path": "knowledge/watch_item_detection_rules.json",
+      "recommended_for_upload": true,
+      "purpose": "Provides machine-readable watch item detection rules."
+    },
+    {
+      "path": "knowledge/automation_blueprint.md",
+      "recommended_for_upload": true,
+      "purpose": "Defines recurring automation workflows for scheduled finance brief generation."
+    },
+    {
+      "path": "knowledge/predefined_review_prompt.md",
+      "recommended_for_upload": true,
+      "purpose": "Provides the canonical reusable prompt for automated CSV review."
+    },
+    {
+      "path": "knowledge/example_user_flows.md",
+      "recommended_for_upload": true,
+      "purpose": "Documents manual, automated, advisor, multi-file, and troubleshooting workflows."
+    },
+    {
+      "path": "knowledge/integration_notes.md",
+      "recommended_for_upload": true,
+      "purpose": "Explains supported and planned integration patterns."
+    },
+    {
+      "path": "knowledge/sample_brief_examples.md",
+      "recommended_for_upload": true,
+      "purpose": "Provides synthetic example outputs for testing, demos, and regression checks."
+    },
+    {
+      "path": "knowledge/source_notes.md",
+      "recommended_for_upload": true,
+      "purpose": "Tracks source material, assumptions, and maintenance notes."
     }
-  ]
+  ],
+  "safety_note": "Do not upload or store real bank account numbers, full card numbers, tax IDs, or confidential client financial records.",
+  "last_updated_note": "Completed 20-file recommended GPT Knowledge package under the knowledge directory."
 }

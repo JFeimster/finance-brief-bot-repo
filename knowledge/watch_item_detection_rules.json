@@ -1,0 +1,72 @@
+{
+  "project": "Weekly Finance Brief Bot",
+  "purpose": "Defines common watch item triggers for weekly cash-flow review.",
+  "watch_item_triggers": [
+    {
+      "trigger": "Missing balance data",
+      "default_level": "Watch List",
+      "why_it_matters": "Net activity does not confirm actual cash available.",
+      "suggested_action": "Ask for opening and ending balances or current cash balance."
+    },
+    {
+      "trigger": "Negative net cash movement",
+      "default_level": "High Attention",
+      "why_it_matters": "Outflows exceeded inflows during the review period.",
+      "suggested_action": "Review upcoming obligations and expected receivables."
+    },
+    {
+      "trigger": "Large unusual outflow",
+      "default_level": "Watch List",
+      "why_it_matters": "One-time or unusual expenses can distort cash position.",
+      "suggested_action": "Confirm whether the payment was expected and whether similar payments are due soon."
+    },
+    {
+      "trigger": "Large unusual inflow",
+      "default_level": "Low Risk",
+      "why_it_matters": "One-time deposits may make the week look stronger than normal.",
+      "suggested_action": "Confirm whether the deposit is recurring or one-time."
+    },
+    {
+      "trigger": "Duplicate-looking transactions",
+      "default_level": "Watch List",
+      "why_it_matters": "Duplicates may overstate inflows or outflows.",
+      "suggested_action": "Flag possible duplicates for review instead of deleting them silently."
+    },
+    {
+      "trigger": "Possible transfer activity",
+      "default_level": "Low Risk",
+      "why_it_matters": "Transfers may be mistaken for revenue or expenses.",
+      "suggested_action": "Confirm whether the transaction is an internal transfer."
+    },
+    {
+      "trigger": "Recurring debt or financing payments",
+      "default_level": "High Attention",
+      "why_it_matters": "Debt service can create recurring cash-flow pressure.",
+      "suggested_action": "Track payment frequency and compare against weekly inflows."
+    },
+    {
+      "trigger": "Unclear transaction signs",
+      "default_level": "Watch List",
+      "why_it_matters": "Positive and negative signs may be interpreted differently across exports.",
+      "suggested_action": "Ask user to confirm whether amounts represent debits, credits, or signed net activity."
+    },
+    {
+      "trigger": "High software or subscription volume",
+      "default_level": "Low Risk",
+      "why_it_matters": "Small recurring tools can quietly stack into meaningful spend.",
+      "suggested_action": "Review subscriptions monthly and cancel unused tools."
+    },
+    {
+      "trigger": "Revenue concentration",
+      "default_level": "Watch List",
+      "why_it_matters": "A week may look healthy because of one or two large deposits.",
+      "suggested_action": "Confirm whether large deposits are recurring, delayed, or one-time."
+    }
+  ],
+  "rules": [
+    "Do not exaggerate risk.",
+    "If data is incomplete, state that the risk level is based only on uploaded information.",
+    "A watch item is not a final diagnosis.",
+    "Recommendations should be operational next steps, not tax, legal, accounting, investment, lending, or underwriting advice."
+  ]
+}
