@@ -20,7 +20,7 @@ This repository contains the working files for the GPT, including documentation,
 ---
 
 - `docs/` — Core documentation and GPT behavior references.
-Includes brief output rules, CSV column mapping, cash-flow calculations, risk framework, data quality checks, privacy rules, funding readiness guidance, and advice boundaries.
+  - Includes brief output rules, CSV column mapping, cash-flow calculations, risk framework, data quality checks, privacy rules, funding readiness guidance, and advice boundaries.
 
 - `config/` — Machine-readable JSON rule files.
   - Includes category normalization rules and watch item detection rules.
