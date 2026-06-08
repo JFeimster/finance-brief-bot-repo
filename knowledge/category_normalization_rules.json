@@ -1,72 +1,370 @@
 {
   "project": "Weekly Finance Brief Bot",
-  "purpose": "Provides practical category buckets and keyword mappings for normalizing transaction activity.",
+  "version": "1.1.0",
+  "purpose": "Provides practical category buckets and keyword mappings for normalizing transaction activity in weekly cash-flow reviews.",
+  "normalization_principles": [
+    "Use practical owner-friendly buckets instead of overly technical accounting categories.",
+    "Preserve uncertainty when a transaction cannot be classified confidently.",
+    "Do not treat transfers as operating revenue or operating expense without confirmation.",
+    "Do not silently delete or ignore duplicate-looking transactions.",
+    "Prefer clear assumptions over false precision.",
+    "Use existing CSV categories when they appear reliable, but normalize them when they are too granular or inconsistent."
+  ],
   "category_buckets": [
     {
       "category": "Revenue / Inflows",
-      "keywords": ["deposit", "payment", "revenue", "sales", "stripe", "square", "paypal", "shopify", "invoice", "ach credit"]
+      "direction": "inflow",
+      "description": "Customer payments, sales deposits, invoice payments, platform payouts, and other operating receipts.",
+      "keywords": [
+        "deposit",
+        "payment",
+        "customer payment",
+        "client payment",
+        "invoice",
+        "invoice payment",
+        "revenue",
+        "sales",
+        "sale",
+        "stripe",
+        "square",
+        "paypal",
+        "shopify",
+        "etsy",
+        "amazon",
+        "toast",
+        "merchant deposit",
+        "processor payout",
+        "ach credit",
+        "payout",
+        "settlement"
+      ],
+      "notes": "Do not automatically classify all deposits as revenue. Transfers, owner contributions, refunds, and loan proceeds should be separated when visible."
     },
     {
       "category": "Payroll",
-      "keywords": ["payroll", "gusto", "adp", "paychex", "wages", "salary", "employee"]
+      "direction": "outflow",
+      "description": "Employee payroll, wages, payroll taxes, and payroll provider debits.",
+      "keywords": [
+        "payroll",
+        "gusto",
+        "adp",
+        "paychex",
+        "wages",
+        "salary",
+        "employee",
+        "direct deposit payroll",
+        "payroll tax"
+      ],
+      "notes": "Payroll pressure may become a watch item when large relative to inflows or upcoming obligations."
     },
     {
       "category": "Contractors",
-      "keywords": ["contractor", "freelancer", "upwork", "fiverr", "1099", "consultant"]
+      "direction": "outflow",
+      "description": "Payments to freelancers, 1099 workers, agencies, contractors, or consultants.",
+      "keywords": [
+        "contractor",
+        "freelancer",
+        "upwork",
+        "fiverr",
+        "1099",
+        "consultant",
+        "agency payment",
+        "subcontractor"
+      ],
+      "notes": "Some consultant payments may also fit Professional Services. Use description context."
     },
     {
       "category": "Rent / Facilities",
-      "keywords": ["rent", "lease", "office", "coworking", "utilities", "electric", "water", "internet"]
+      "direction": "outflow",
+      "description": "Rent, lease, utilities, office, coworking, and facility costs.",
+      "keywords": [
+        "rent",
+        "lease",
+        "office",
+        "coworking",
+        "wework",
+        "utilities",
+        "electric",
+        "water",
+        "internet",
+        "facility",
+        "facilities",
+        "property management"
+      ],
+      "notes": "Rent or facility obligations may be watch items if upcoming or unusually large."
     },
     {
       "category": "Software / Subscriptions",
-      "keywords": ["software", "subscription", "saas", "openai", "google", "microsoft", "notion", "zapier", "quickbooks", "xero", "slack"]
+      "direction": "outflow",
+      "description": "SaaS tools, subscriptions, cloud software, productivity tools, and recurring app costs.",
+      "keywords": [
+        "software",
+        "subscription",
+        "saas",
+        "openai",
+        "chatgpt",
+        "google",
+        "google workspace",
+        "microsoft",
+        "office 365",
+        "notion",
+        "zapier",
+        "make",
+        "n8n",
+        "quickbooks",
+        "xero",
+        "slack",
+        "airtable",
+        "hubspot",
+        "mailchimp",
+        "canva",
+        "adobe",
+        "dropbox",
+        "zoom"
+      ],
+      "notes": "Small recurring charges can stack up. Flag high subscription volume as Low Risk or Watch List depending on amount."
     },
     {
       "category": "Marketing / Advertising",
-      "keywords": ["facebook ads", "google ads", "meta", "advertising", "marketing", "seo", "lead", "campaign"]
+      "direction": "outflow",
+      "description": "Ad spend, marketing services, lead generation, SEO, sponsorship, and campaign costs.",
+      "keywords": [
+        "facebook ads",
+        "meta ads",
+        "google ads",
+        "tiktok ads",
+        "linkedin ads",
+        "advertising",
+        "marketing",
+        "seo",
+        "lead",
+        "lead gen",
+        "campaign",
+        "sponsorship",
+        "promotion",
+        "boosted post"
+      ],
+      "notes": "Marketing should be reviewed when cash is tightening or spend spikes."
     },
     {
       "category": "Debt Service",
-      "keywords": ["loan", "advance", "financing", "repayment", "ach debit", "merchant cash advance", "mca", "line of credit"]
+      "direction": "outflow",
+      "description": "Loan payments, financing payments, line of credit payments, MCA/advance repayments, interest, or principal payments.",
+      "keywords": [
+        "loan",
+        "advance",
+        "financing",
+        "repayment",
+        "ach debit",
+        "merchant cash advance",
+        "mca",
+        "line of credit",
+        "loc payment",
+        "principal",
+        "interest",
+        "daily debit",
+        "weekly debit",
+        "funding repayment",
+        "capital repayment"
+      ],
+      "notes": "Do not recommend stopping payments or refinancing. Heavy or frequent debt service can be a High Attention watch item."
     },
     {
       "category": "Taxes",
-      "keywords": ["irs", "tax", "state tax", "department of revenue", "treasury"]
+      "direction": "outflow",
+      "description": "Federal, state, local, payroll, sales, and estimated tax payments.",
+      "keywords": [
+        "irs",
+        "tax",
+        "state tax",
+        "department of revenue",
+        "treasury",
+        "estimated tax",
+        "sales tax",
+        "payroll tax",
+        "franchise tax"
+      ],
+      "notes": "Do not provide tax advice. Suggest verifying obligations with a qualified professional."
     },
     {
       "category": "Inventory / COGS",
-      "keywords": ["inventory", "supplies", "materials", "wholesale", "cogs", "cost of goods"]
+      "direction": "outflow",
+      "description": "Inventory, materials, supplies, wholesale purchases, product costs, and cost of goods sold.",
+      "keywords": [
+        "inventory",
+        "supplies",
+        "materials",
+        "wholesale",
+        "cogs",
+        "cost of goods",
+        "supplier",
+        "vendor purchase",
+        "stock",
+        "raw materials"
+      ],
+      "notes": "Inventory spikes may be normal for product businesses but should be explained if material."
     },
     {
       "category": "Professional Services",
-      "keywords": ["legal", "accounting", "bookkeeping", "consulting", "advisor", "attorney", "cpa"]
+      "direction": "outflow",
+      "description": "Legal, accounting, bookkeeping, consulting, advisory, compliance, and professional support costs.",
+      "keywords": [
+        "legal",
+        "law firm",
+        "attorney",
+        "accounting",
+        "bookkeeping",
+        "consulting",
+        "advisor",
+        "cpa",
+        "tax prep",
+        "compliance",
+        "professional services"
+      ],
+      "notes": "Do not treat professional service spend as bad by default. Flag only if unusually large or relevant to cash pressure."
     },
     {
       "category": "Insurance",
-      "keywords": ["insurance", "premium", "policy"]
+      "direction": "outflow",
+      "description": "Business insurance, liability insurance, workers comp, auto, health, or policy premiums.",
+      "keywords": [
+        "insurance",
+        "premium",
+        "policy",
+        "liability",
+        "workers comp",
+        "workers compensation",
+        "auto insurance",
+        "health insurance"
+      ],
+      "notes": "Large annual or quarterly premiums may distort a weekly view."
     },
     {
       "category": "Travel / Meals",
-      "keywords": ["hotel", "airline", "uber", "lyft", "restaurant", "meals", "travel", "parking", "fuel"]
+      "direction": "outflow",
+      "description": "Travel, lodging, transportation, meals, parking, fuel, and related operating expenses.",
+      "keywords": [
+        "hotel",
+        "airline",
+        "uber",
+        "lyft",
+        "restaurant",
+        "meals",
+        "travel",
+        "parking",
+        "fuel",
+        "gas",
+        "rental car",
+        "airbnb"
+      ],
+      "notes": "Do not provide tax deductibility guidance."
     },
     {
       "category": "Owner Draws / Distributions",
-      "keywords": ["owner draw", "distribution", "member draw", "shareholder", "draw"]
+      "direction": "outflow",
+      "description": "Owner withdrawals, member draws, shareholder distributions, and related owner cash movement.",
+      "keywords": [
+        "owner draw",
+        "distribution",
+        "member draw",
+        "shareholder",
+        "draw",
+        "owner distribution",
+        "partner distribution"
+      ],
+      "notes": "Owner draws may be sensitive. Describe neutrally and avoid judgment."
     },
     {
       "category": "Transfers",
-      "keywords": ["transfer", "internal transfer", "bank transfer", "zelle transfer", "wire transfer"]
+      "direction": "transfer_or_unclear",
+      "description": "Internal transfers, account-to-account movement, wires, Zelle transfers, and bank transfers.",
+      "keywords": [
+        "transfer",
+        "internal transfer",
+        "bank transfer",
+        "zelle transfer",
+        "wire transfer",
+        "online transfer",
+        "from checking",
+        "to savings",
+        "to operating",
+        "from operating",
+        "account transfer"
+      ],
+      "notes": "Transfers should not be treated as operating revenue or operating expense without confirmation."
+    },
+    {
+      "category": "Refunds / Reversals / Chargebacks",
+      "direction": "context_dependent",
+      "description": "Refunds, reversals, chargebacks, returned payments, and corrections.",
+      "keywords": [
+        "refund",
+        "reversal",
+        "chargeback",
+        "returned payment",
+        "return item",
+        "nsf",
+        "correction",
+        "dispute"
+      ],
+      "notes": "Direction depends on context. Flag unclear refunds, reversals, and chargebacks."
+    },
+    {
+      "category": "Bank Fees",
+      "direction": "outflow",
+      "description": "Bank fees, service charges, overdraft fees, wire fees, and account fees.",
+      "keywords": [
+        "bank fee",
+        "service charge",
+        "monthly fee",
+        "wire fee",
+        "overdraft",
+        "nsf fee",
+        "maintenance fee"
+      ],
+      "notes": "Repeated overdraft or NSF fees may be a watch item."
     },
     {
       "category": "Other / Uncategorized",
-      "keywords": []
+      "direction": "unclear",
+      "description": "Transactions that cannot be confidently classified.",
+      "keywords": [],
+      "notes": "Use this category when classification is unclear. Explain assumptions in the Data Quality Check."
     }
   ],
-  "rules": [
-    "When uncertain, preserve uncertainty.",
-    "Do not force unclear transactions into a category.",
-    "Flag possible transfers before treating them as revenue or expense.",
-    "Do not silently delete or ignore duplicate-looking transactions."
+  "matching_rules": [
+    "Match keywords case-insensitively.",
+    "Use description, memo, vendor, customer, category, and transaction type fields as classification clues.",
+    "If multiple categories match, choose the category most supported by transaction direction and description context.",
+    "If transaction direction conflicts with category, preserve uncertainty and flag it.",
+    "If the transaction appears to be a transfer, prioritize Transfers over Revenue / Inflows or expense categories.",
+    "If the transaction appears to be a refund, reversal, or chargeback, prioritize Refunds / Reversals / Chargebacks and explain uncertainty.",
+    "If category confidence is low, use Other / Uncategorized."
+  ],
+  "confidence_levels": [
+    {
+      "level": "High",
+      "meaning": "Column names, direction, description, and category all support the classification."
+    },
+    {
+      "level": "Medium",
+      "meaning": "Most evidence supports the classification, but one field is missing or vague."
+    },
+    {
+      "level": "Low",
+      "meaning": "Classification is based on limited clues and should be reviewed."
+    },
+    {
+      "level": "Unclear",
+      "meaning": "The transaction should remain uncategorized or be flagged for user confirmation."
+    }
+  ],
+  "do_not_do": [
+    "Do not classify every deposit as revenue.",
+    "Do not classify every outgoing transfer as an expense.",
+    "Do not ignore owner draws or distributions if visible.",
+    "Do not treat loan proceeds as operating revenue.",
+    "Do not provide tax deductibility guidance.",
+    "Do not make lending, underwriting, accounting, legal, tax, or investment recommendations."
   ]
 }
