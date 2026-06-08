@@ -17,6 +17,8 @@ This repository contains the working files for the GPT, including documentation,
 - `LICENSE` — Project license.
 - `repo_manifest.json` — Machine-readable overview of the repo purpose, folders, and safety notes.
 
+---
+
 - `docs/` — Core documentation and GPT behavior references.
   - Includes brief output rules, CSV column mapping, cash-flow calculations, risk framework, data quality checks, privacy rules, funding readiness guidance, and advice boundaries.
 
@@ -43,6 +45,9 @@ This repository contains the working files for the GPT, including documentation,
 
 - `prompts/` — Reusable prompts, prompt templates, and testing prompts.
   - Includes ChatGPT prompts, testing prompts, advisor prompts, coding-agent prompts, and prompt manifests.
+
+
+---
 
 - `tooling/` — Tool-specific guidance for AI coding assistants and development workflows.
   - `tooling/codex/` — Codex and ChatGPT coding workflow instructions and tasks.
